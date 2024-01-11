@@ -2,16 +2,13 @@
 
 [ext_resource type="Script" path="res://scenes/StartScene.gd" id="1_fic6o"]
 [ext_resource type="FontFile" uid="uid://dmhfu66md6tvm" path="res://assets/fonts/antiquity-print.ttf" id="2_m3oo6"]
+[ext_resource type="Texture2D" uid="uid://bowal6nplueto" path="res://assets/long_name.png" id="3_lh8jo"]
 
 [sub_resource type="Theme" id="Theme_k6rhi"]
 default_font = ExtResource("2_m3oo6")
 
 [sub_resource type="Theme" id="Theme_u6qi0"]
 default_font = ExtResource("2_m3oo6")
-
-[sub_resource type="LabelSettings" id="LabelSettings_t7cuc"]
-font = ExtResource("2_m3oo6")
-font_size = 32
 
 [node name="StartScene" type="Node2D"]
 script = ExtResource("1_fic6o")
@@ -36,14 +33,11 @@ theme = SubResource("Theme_u6qi0")
 text = "Exit"
 flat = true
 
-[node name="Label" type="Label" parent="."]
+[node name="LongName" type="Sprite2D" parent="."]
 texture_filter = 1
-offset_left = 472.0
-offset_top = 104.0
-offset_right = 719.0
-offset_bottom = 162.0
-text = "SPMC GAME"
-label_settings = SubResource("LabelSettings_t7cuc")
+position = Vector2(532, 194)
+scale = Vector2(1.54225, 1.33158)
+texture = ExtResource("3_lh8jo")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
