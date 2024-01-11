@@ -1,30 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://6k3mqkpx0jdm"]
+[gd_scene load_steps=6 format=3 uid="uid://6k3mqkpx0jdm"]
 
 [ext_resource type="Script" path="res://scenes/StartScene.gd" id="1_fic6o"]
+[ext_resource type="FontFile" uid="uid://dmhfu66md6tvm" path="res://assets/fonts/antiquity-print.ttf" id="2_m3oo6"]
+
+[sub_resource type="Theme" id="Theme_k6rhi"]
+default_font = ExtResource("2_m3oo6")
+
+[sub_resource type="Theme" id="Theme_u6qi0"]
+default_font = ExtResource("2_m3oo6")
 
 [sub_resource type="LabelSettings" id="LabelSettings_t7cuc"]
-font_size = 42
+font = ExtResource("2_m3oo6")
+font_size = 32
 
 [node name="StartScene" type="Node2D"]
 script = ExtResource("1_fic6o")
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 offset_left = 21.0
 offset_top = 354.0
 offset_right = 114.0
 offset_bottom = 385.0
+theme = SubResource("Theme_k6rhi")
 text = "Polygon"
 flat = true
 
 [node name="Button2" type="Button" parent="."]
+texture_filter = 1
 offset_left = 7.0
 offset_top = 408.0
 offset_right = 109.0
 offset_bottom = 439.0
+theme = SubResource("Theme_u6qi0")
 text = "Exit"
 flat = true
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 offset_left = 472.0
 offset_top = 104.0
 offset_right = 719.0
