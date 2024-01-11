@@ -1,0 +1,17 @@
+extends Node
+
+enum DamageType {
+	ACID,
+	CRUSHING,
+	COLD,
+	FIRE,
+	MAGIC,
+	LIGHTNING,
+	NECROTIC,
+	STABBING,
+	POISON,
+	PSYCHE,
+	LIGHT,
+	SLASHING,
+	SOUND,
+}
