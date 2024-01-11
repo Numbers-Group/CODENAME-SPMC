@@ -1,12 +1,12 @@
 [gd_scene load_steps=67 format=3 uid="uid://c37ntmreaxwb2"]
 
 [ext_resource type="Texture2D" uid="uid://ddb6i6oispith" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_3t175"]
-[ext_resource type="Script" path="res://test_scene.gd" id="1_yrry4"]
+[ext_resource type="Script" path="res://scripts/test_scene.gd" id="1_yrry4"]
 [ext_resource type="Texture2D" uid="uid://bmdla5r2ri4wr" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_vxpks"]
-[ext_resource type="Script" path="res://Player.gd" id="3_fwffr"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="3_fwffr"]
 [ext_resource type="Texture2D" uid="uid://dggtlat7nbyhp" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="3_tfvrf"]
 [ext_resource type="Texture2D" uid="uid://m6jqkkbe8vf" path="res://assets/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png" id="5_1v5ob"]
-[ext_resource type="Script" path="res://animation.gd" id="6_n2p05"]
+[ext_resource type="Script" path="res://scripts/animation.gd" id="6_n2p05"]
 [ext_resource type="Texture2D" uid="uid://dbgje5widd5iv" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Buildings/House/House_Blue.png" id="8_erpmk"]
 [ext_resource type="Texture2D" uid="uid://wx3vqdq3g28u" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Buildings/Castle/Castle_Blue.png" id="9_y4g11"]
 [ext_resource type="Texture2D" uid="uid://vy3xo6gkuqvy" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Buildings/Tower/Tower_Blue.png" id="10_bi038"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c0of6uqvnlkk1" path="res://assets/Tiny Swords (Update 010)/Deco/08.png" id="18_knpty"]
 [ext_resource type="Texture2D" uid="uid://d2m8mfi35yl1s" path="res://assets/Tiny Swords (Update 010)/Deco/05.png" id="19_r8ihk"]
 [ext_resource type="Texture2D" uid="uid://bwlxgkbekfrkl" path="res://assets/Tiny Swords (Update 010)/Resources/Sheep/HappySheep_Idle.png" id="20_06sj6"]
-[ext_resource type="Script" path="res://sheep.gd" id="21_hi11j"]
+[ext_resource type="Script" path="res://scripts/sheep.gd" id="21_hi11j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r1u6h"]
 texture = ExtResource("1_3t175")
