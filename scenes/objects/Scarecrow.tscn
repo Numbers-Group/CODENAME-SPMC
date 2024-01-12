@@ -15,6 +15,7 @@ height = 112.0
 z_index = 4
 z_as_relative = false
 y_sort_enabled = true
+texture_filter = 1
 position = Vector2(566, 242)
 texture = ExtResource("1_l73xl")
 script = ExtResource("2_ned3g")

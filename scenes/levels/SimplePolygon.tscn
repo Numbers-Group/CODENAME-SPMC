@@ -1039,3 +1039,4 @@ layer_0/tile_data = PackedInt32Array(589838, 65536, 0, 589839, 131072, 0, 589840
 [node name="Scarecrow" parent="." instance=ExtResource("5_idd28")]
 
 [node name="Camera" parent="." instance=ExtResource("6_ttvqf")]
+position = Vector2(369, 295)

@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dt8so2q3ywxpn" path="res://assets/Tiny Swords (Update 010)/UI/Pointers/02.png" id="3_wk52x"]
 [ext_resource type="Script" path="res://scripts/OnHovered.gd" id="4_uobxj"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7f3a"]
+radius = 21.0
+height = 66.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmkaf"]
 radius = 18.0
 height = 46.0
@@ -106,16 +110,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7f3a"]
-radius = 21.0
-height = 64.0
-
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 y_sort_enabled = true
 position = Vector2(365, 302)
 script = ExtResource("1_i3x34")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+shape = SubResource("CapsuleShape2D_h7f3a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -2)
@@ -124,6 +129,7 @@ shape = SubResource("CapsuleShape2D_pmkaf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 z_index = 4
 y_sort_enabled = true
+texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_xaiyc")
 animation = &"run"
@@ -135,11 +141,6 @@ z_index = 3
 position = Vector2(1, 22)
 texture = ExtResource("3_wk52x")
 script = ExtResource("4_uobxj")
-
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-shape = SubResource("CapsuleShape2D_h7f3a")
 
 [connection signal="mouse_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/OnHovered" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D/OnHovered" method="_on_area_2d_mouse_exited"]

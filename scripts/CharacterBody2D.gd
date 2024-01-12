@@ -6,10 +6,10 @@ var action
 
 # Input handler.
 func _input(event):
-	if event.is_action_pressed("mouse_right_click"):
+	if event.is_action_pressed("mouse_left_click"):
 		target = get_global_mouse_position()
 		action = "run"
-	elif event.is_action_pressed("mouse_left_click"):
+	elif event.is_action_pressed("mouse_right_click"):
 		action = "attack"
 
 
