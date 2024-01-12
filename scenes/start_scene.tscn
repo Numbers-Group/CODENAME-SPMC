@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://6k3mqkpx0jdm"]
 
-[ext_resource type="Script" path="res://scenes/StartScene.gd" id="1_fic6o"]
+[ext_resource type="Script" path="res://scripts/StartScene.gd" id="1_fic6o"]
 [ext_resource type="FontFile" uid="uid://dmhfu66md6tvm" path="res://assets/fonts/antiquity-print.ttf" id="2_m3oo6"]
 [ext_resource type="Texture2D" uid="uid://bowal6nplueto" path="res://assets/long_name.png" id="3_lh8jo"]
 

@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://yuyrhl5si8m6" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_02.png" id="24_vpl6q"]
 [ext_resource type="Texture2D" uid="uid://ixug73q0eijd" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_03.png" id="25_towrm"]
 [ext_resource type="Texture2D" uid="uid://dfg7ii06og18e" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_04.png" id="26_maaro"]
-[ext_resource type="Script" path="res://scenes/RockOnWater.gd" id="27_vgmn2"]
+[ext_resource type="Script" path="res://scripts/RockOnWater.gd" id="27_vgmn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6f45u"]
 texture = ExtResource("2_qc3fj")
