@@ -1,9 +1,33 @@
-[gd_scene load_steps=20 format=3 uid="uid://bv55jlpyof8it"]
+[gd_scene load_steps=26 format=3 uid="uid://bv55jlpyof8it"]
 
 [ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_i3x34"]
 [ext_resource type="Texture2D" uid="uid://bmdla5r2ri4wr" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_pnoa0"]
 [ext_resource type="Texture2D" uid="uid://dt8so2q3ywxpn" path="res://assets/Tiny Swords (Update 010)/UI/Pointers/02.png" id="3_wk52x"]
 [ext_resource type="Script" path="res://scripts/OnHovered.gd" id="4_uobxj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg8n7"]
+atlas = ExtResource("2_pnoa0")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bokv"]
+atlas = ExtResource("2_pnoa0")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6cqa"]
+atlas = ExtResource("2_pnoa0")
+region = Rect2(384, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh4v5"]
+atlas = ExtResource("2_pnoa0")
+region = Rect2(576, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7sdi"]
+atlas = ExtResource("2_pnoa0")
+region = Rect2(768, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n3bs"]
+atlas = ExtResource("2_pnoa0")
+region = Rect2(960, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mp3a6"]
 atlas = ExtResource("2_pnoa0")
@@ -55,6 +79,29 @@ region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xaiyc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg8n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bokv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6cqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yh4v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7sdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n3bs")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mp3a6")
@@ -113,17 +160,14 @@ height = 46.0
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-y_sort_enabled = true
 position = Vector2(365, 302)
 script = ExtResource("1_i3x34")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-z_index = 4
-y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_xaiyc")
-animation = &"run"
+animation = &"attack"
 speed_scale = 2.0
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D"]
