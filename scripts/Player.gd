@@ -1,40 +1,58 @@
 extends CharacterBody2D
 
-@export var speed = 150
-
-var target = position
+const SPEED = 150;
+var target = position;
 var action
-var isAttacking = false
-
-
+@onready var global_scripts = preload("res://scripts/Dice.gd");
 
 # Input handler.
 func _input(event):
-	if event.is_action_pressed("mouse_right_click"):
+	# Set action for animation.
+	if event.is_action_pressed("mouse_left_click"):
 		target = get_global_mouse_position()
 		action = "run"
-	elif event.is_action_pressed("mouse_left_click"):
-		action = "attack"
-		isAttacking = true
+	elif event.is_action_pressed("mouse_right_click"):
+		if global_scripts.critical_chance() == true:
+			action = "attack2"
+		else:
+			action = "attack"
 
 
 func _physics_process(delta):
-	velocity = position.direction_to(target) * speed
+	velocity = position.direction_to(target) * SPEED
 	
 	if velocity[0] > 0:
 		$AnimatedSprite2D.flip_h = false
 	else:
 		$AnimatedSprite2D.flip_h = true
 		
-		
+	# Select animation using action.
 	if position.distance_to(target) > 10:
-		$AnimatedSprite2D.play(action)
+		$AnimatedSprite2D.play("run")
 		move_and_slide()
+	elif action == "attack":
+		$AnimatedSprite2D.play("attack")
+	elif action == "attack2":
+		$AnimatedSprite2D.play("attack2")
 	else:
 		$AnimatedSprite2D.play("idle")
 		
+	stop_attack_animations()
+	
+	
 
-
-func _on_animated_sprite_2d_animation_finished():
-	if $AnimatedSprite2D.animation == "attack":
-		isAttacking = false
+func stop_attack_animations() -> void:
+	if action == "attack" and $AnimatedSprite2D.frame == 5:
+		print("Changed")
+		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.play("idle")
+		action = "idle"
+	elif action == "attack2" and $AnimatedSprite2D.frame == 5:
+		print("Changed")
+		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.play("idle")
+		action = "idle"
+	
+		
+	
+		
