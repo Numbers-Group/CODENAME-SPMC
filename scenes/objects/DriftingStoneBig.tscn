@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://c70rytin5sn0v"]
+
+[ext_resource type="Texture2D" uid="uid://dfg7ii06og18e" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Rocks/Rocks_04.png" id="1_fy6eo"]
+[ext_resource type="Script" path="res://scripts/DriftingStone.gd" id="2_3rjcu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46r3v"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il771"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfibe"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nd0m"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47lig"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jql8a"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hycxp"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yv2yd"]
+atlas = ExtResource("1_fy6eo")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ad4ye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46r3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il771")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfibe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nd0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47lig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jql8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hycxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yv2yd")
+}],
+"loop": true,
+"name": &"drift",
+"speed": 5.0
+}]
+
+[node name="DriftingStoneBig" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ad4ye")
+animation = &"drift"
+speed_scale = 2.0
+script = ExtResource("2_3rjcu")

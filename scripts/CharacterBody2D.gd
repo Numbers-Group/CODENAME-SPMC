@@ -28,4 +28,6 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.play("idle")
 		
+	
+		
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://chgshewawse2y"]
+[gd_scene load_steps=16 format=3 uid="uid://chgshewawse2y"]
 
 [ext_resource type="Texture2D" uid="uid://cgi5i7jk2igwy" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="1_iu14l"]
 [ext_resource type="Texture2D" uid="uid://dggtlat7nbyhp" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_p6ult"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bv55jlpyof8it" path="res://scenes/objects/Player.tscn" id="4_b4rs1"]
 [ext_resource type="PackedScene" uid="uid://beilyksynpdxs" path="res://scenes/objects/Scarecrow.tscn" id="5_idd28"]
 [ext_resource type="PackedScene" uid="uid://cnsjumvityxv2" path="res://scenes/objects/Camera.tscn" id="6_ttvqf"]
+[ext_resource type="PackedScene" uid="uid://ck3tg216gmkdv" path="res://scenes/objects/DriftingStoneMedium.tscn" id="7_rmllf"]
+[ext_resource type="PackedScene" uid="uid://c70rytin5sn0v" path="res://scenes/objects/DriftingStoneBig.tscn" id="8_2vi2d"]
+[ext_resource type="PackedScene" uid="uid://q8bew5e6wi4r" path="res://scenes/objects/DriftingStoneSmall.tscn" id="9_xrjsg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcarr"]
 texture = ExtResource("1_iu14l")
@@ -1040,3 +1043,12 @@ layer_0/tile_data = PackedInt32Array(589838, 65536, 0, 589839, 131072, 0, 589840
 
 [node name="Camera" parent="." instance=ExtResource("6_ttvqf")]
 position = Vector2(369, 295)
+
+[node name="DriftingStoneMedium" parent="." instance=ExtResource("7_rmllf")]
+position = Vector2(101, 130)
+
+[node name="DriftingStoneBig" parent="." instance=ExtResource("8_2vi2d")]
+position = Vector2(733, 547)
+
+[node name="DriftingStoneSmall" parent="." instance=ExtResource("9_xrjsg")]
+position = Vector2(204, 519)
