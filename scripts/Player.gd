@@ -43,12 +43,10 @@ func _physics_process(delta):
 
 func stop_attack_animations() -> void:
 	if action == "attack" and $AnimatedSprite2D.frame == 5:
-		print("Changed")
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.play("idle")
 		action = "idle"
 	elif action == "attack2" and $AnimatedSprite2D.frame == 5:
-		print("Changed")
 		$AnimatedSprite2D.stop()
 		$AnimatedSprite2D.play("idle")
 		action = "idle"

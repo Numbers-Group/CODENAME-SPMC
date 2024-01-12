@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://bv55jlpyof8it"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_i3x34"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_swutv"]
 [ext_resource type="Texture2D" uid="uid://bmdla5r2ri4wr" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_pnoa0"]
 [ext_resource type="Texture2D" uid="uid://dt8so2q3ywxpn" path="res://assets/Tiny Swords (Update 010)/UI/Pointers/02.png" id="3_wk52x"]
 [ext_resource type="Script" path="res://scripts/OnHovered.gd" id="4_uobxj"]
@@ -208,7 +208,7 @@ height = 66.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(-1, 0)
-script = ExtResource("1_i3x34")
+script = ExtResource("1_swutv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-1, 2)
