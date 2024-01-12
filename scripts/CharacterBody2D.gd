@@ -36,8 +36,12 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("attack2")
 	else:
 		$AnimatedSprite2D.play("idle")
+		
+	stop_attack_animations()
 	
-	# Stop attack animation.
+	
+
+func stop_attack_animations() -> void:
 	if action == "attack" and $AnimatedSprite2D.frame == 5:
 		print("Changed")
 		$AnimatedSprite2D.stop()
