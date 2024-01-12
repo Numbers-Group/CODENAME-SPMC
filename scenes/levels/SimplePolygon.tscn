@@ -1016,6 +1016,7 @@ sources/0 = SubResource("TileSetAtlasSource_cmkvn")
 [node name="SimplePolygon" type="Node2D"]
 
 [node name="Ground" type="Node2D" parent="."]
+texture_filter = 1
 
 [node name="WaterTM" type="TileMap" parent="Ground"]
 position = Vector2(-930, -511)
