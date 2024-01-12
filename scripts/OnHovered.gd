@@ -11,10 +11,8 @@ func _process(delta):
 
 
 func _on_area_2d_mouse_entered():
-	print("Mouse Entered!")
 	visible = true
 
 
 func _on_area_2d_mouse_exited():
-	print("Mouse Exited!")
 	visible = false
