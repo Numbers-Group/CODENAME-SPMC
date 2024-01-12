@@ -1,17 +1,17 @@
 [gd_scene load_steps=32 format=3 uid="uid://chgshewawse2y"]
 
-[ext_resource type="Texture2D" uid="uid://cgi5i7jk2igwy" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="1_urc4w"]
-[ext_resource type="Texture2D" uid="uid://dggtlat7nbyhp" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_f6uya"]
-[ext_resource type="Texture2D" uid="uid://ddb6i6oispith" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="2_hwwp0"]
-[ext_resource type="Texture2D" uid="uid://dt8so2q3ywxpn" path="res://assets/Tiny Swords (Update 010)/UI/Pointers/02.png" id="4_hul2m"]
-[ext_resource type="Texture2D" uid="uid://oexs1tlega81" path="res://assets/Tiny Swords (Update 010)/Deco/18.png" id="4_s137f"]
-[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="5_ed5mi"]
-[ext_resource type="Texture2D" uid="uid://bmdla5r2ri4wr" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="5_lvrxi"]
-[ext_resource type="Script" path="res://scripts/OnHovered.gd" id="5_mbf8k"]
-[ext_resource type="Script" path="res://scripts/Scarecrow.gd" id="5_pcxyl"]
+[ext_resource type="Texture2D" uid="uid://cgi5i7jk2igwy" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="1_iu14l"]
+[ext_resource type="Texture2D" uid="uid://dggtlat7nbyhp" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_p6ult"]
+[ext_resource type="Texture2D" uid="uid://ddb6i6oispith" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="3_yd8e2"]
+[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="4_8v6yf"]
+[ext_resource type="Texture2D" uid="uid://bmdla5r2ri4wr" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="5_t8lxo"]
+[ext_resource type="Texture2D" uid="uid://dt8so2q3ywxpn" path="res://assets/Tiny Swords (Update 010)/UI/Pointers/02.png" id="6_f325v"]
+[ext_resource type="Script" path="res://scripts/OnHovered.gd" id="7_clxgh"]
+[ext_resource type="Texture2D" uid="uid://oexs1tlega81" path="res://assets/Tiny Swords (Update 010)/Deco/18.png" id="8_xvfpk"]
+[ext_resource type="Script" path="res://scripts/Scarecrow.gd" id="9_pdeok"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcarr"]
-texture = ExtResource("1_urc4w")
+texture = ExtResource("1_iu14l")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -33,7 +33,7 @@ texture = ExtResource("1_urc4w")
 sources/0 = SubResource("TileSetAtlasSource_gcarr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svj0g"]
-texture = ExtResource("2_f6uya")
+texture = ExtResource("2_p6ult")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -487,7 +487,7 @@ texture = ExtResource("2_f6uya")
 sources/0 = SubResource("TileSetAtlasSource_svj0g")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cmkvn"]
-texture = ExtResource("2_hwwp0")
+texture = ExtResource("3_yd8e2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1018,51 +1018,51 @@ radius = 18.0
 height = 46.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mp3a6"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(0, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ax7w1"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1o3rb"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(384, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdo1b"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nhkh"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(768, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d6uyk"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(960, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ka1mq"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(0, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2w5p8"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(192, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdjc5"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(384, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yf232"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(576, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_twj77"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(768, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jylkl"]
-atlas = ExtResource("5_lvrxi")
+atlas = ExtResource("5_t8lxo")
 region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_thpei"]
@@ -1151,7 +1151,7 @@ layer_0/tile_data = PackedInt32Array(589838, 65536, 0, 589839, 131072, 0, 589840
 [node name="CharacterBody2D" type="CharacterBody2D" parent="PlayerNode"]
 y_sort_enabled = true
 position = Vector2(365, 302)
-script = ExtResource("5_ed5mi")
+script = ExtResource("4_8v6yf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/CharacterBody2D"]
 position = Vector2(0, -2)
@@ -1169,8 +1169,8 @@ speed_scale = 2.0
 visible = false
 z_index = 3
 position = Vector2(1, 22)
-texture = ExtResource("4_hul2m")
-script = ExtResource("5_mbf8k")
+texture = ExtResource("6_f325v")
+script = ExtResource("7_clxgh")
 
 [node name="Area2D" type="Area2D" parent="PlayerNode/CharacterBody2D"]
 
@@ -1184,16 +1184,16 @@ z_index = 4
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(566, 242)
-texture = ExtResource("4_s137f")
-script = ExtResource("5_pcxyl")
+texture = ExtResource("8_xvfpk")
+script = ExtResource("9_pdeok")
 
 [node name="OnHovered" type="Sprite2D" parent="Scarecrow/Scarecrow"]
 visible = false
 z_index = 3
 z_as_relative = false
 position = Vector2(-1, 61)
-texture = ExtResource("4_hul2m")
-script = ExtResource("5_mbf8k")
+texture = ExtResource("6_f325v")
+script = ExtResource("7_clxgh")
 
 [node name="Area2D" type="Area2D" parent="Scarecrow/Scarecrow"]
 
