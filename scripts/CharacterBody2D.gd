@@ -7,6 +7,7 @@ var action
 
 # Input handler.
 func _input(event):
+	# Set action for animation.
 	if event.is_action_pressed("mouse_left_click"):
 		target = get_global_mouse_position()
 		action = "run"
@@ -25,7 +26,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.flip_h = true
 		
-		
+	# Select animation using action.
 	if position.distance_to(target) > 10:
 		$AnimatedSprite2D.play("run")
 		move_and_slide()
@@ -36,6 +37,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.play("idle")
 	
+	# Stop attack animation.
 	if action == "attack" and $AnimatedSprite2D.frame == 5:
 		print("Changed")
 		$AnimatedSprite2D.stop()
