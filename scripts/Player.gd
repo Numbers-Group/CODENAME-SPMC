@@ -4,6 +4,8 @@ const SPEED = 150;
 var target = position;
 var action
 @onready var global_scripts = preload("res://scripts/Dice.gd");
+@onready var dice_label = get_node("../../Camera/Camera2D/Dice");
+var dice: int;
 
 # Input handler.
 func _input(event):
@@ -12,7 +14,9 @@ func _input(event):
 		target = get_global_mouse_position()
 		action = "run"
 	elif event.is_action_pressed("mouse_right_click"):
-		if global_scripts.critical_chance() == true:
+		dice = global_scripts.critical_chance();
+		dice_label.set_text(str(dice));
+		if dice > 10:
 			action = "attack2"
 		else:
 			action = "attack"
@@ -20,6 +24,7 @@ func _input(event):
 
 func _physics_process(delta):
 	velocity = position.direction_to(target) * SPEED
+	
 	
 	if velocity[0] > 0:
 		$AnimatedSprite2D.flip_h = false
