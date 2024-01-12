@@ -1,20 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnsjumvityxv2"]
+[gd_scene load_steps=10 format=3 uid="uid://cnsjumvityxv2"]
 
 [ext_resource type="Script" path="res://scripts/Camera.gd" id="1_bb0ra"]
+[ext_resource type="Script" path="res://scripts/CameraNode.gd" id="1_xneam"]
+[ext_resource type="Texture2D" uid="uid://bkwpotsqgsnrf" path="res://assets/dices/6Dice.png" id="3_aspub"]
+[ext_resource type="Script" path="res://scripts/DiceAnimated.gd" id="4_ojxl5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqtgb"]
+atlas = ExtResource("3_aspub")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gnie"]
+atlas = ExtResource("3_aspub")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvc62"]
+atlas = ExtResource("3_aspub")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytv4y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqtgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gnie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvc62")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vxtkh"]
 font_size = 40
+font_color = Color(0, 0, 0, 1)
 
 [node name="Camera" type="Node2D"]
+script = ExtResource("1_xneam")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("1_bb0ra")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D"]
+position = Vector2(520, 285)
+scale = Vector2(1.60938, 1.60938)
+sprite_frames = SubResource("SpriteFrames_ytv4y")
+animation = &"run"
+frame_progress = 0.217055
+speed_scale = 2.0
+script = ExtResource("4_ojxl5")
+
 [node name="Dice" type="Label" parent="Camera2D"]
-offset_left = 517.0
-offset_top = 261.0
-offset_right = 563.0
-offset_bottom = 316.0
+offset_left = 496.0
+offset_top = 249.0
+offset_right = 542.0
+offset_bottom = 304.0
 text = "20
 "
 label_settings = SubResource("LabelSettings_vxtkh")
