@@ -1,14 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://chgshewawse2y"]
+[gd_scene load_steps=13 format=3 uid="uid://chgshewawse2y"]
 
 [ext_resource type="Texture2D" uid="uid://cgi5i7jk2igwy" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="1_iu14l"]
 [ext_resource type="Texture2D" uid="uid://dggtlat7nbyhp" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_p6ult"]
 [ext_resource type="Texture2D" uid="uid://ddb6i6oispith" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="3_yd8e2"]
-[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="4_8v6yf"]
-[ext_resource type="Texture2D" uid="uid://bmdla5r2ri4wr" path="res://assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="5_t8lxo"]
-[ext_resource type="Texture2D" uid="uid://dt8so2q3ywxpn" path="res://assets/Tiny Swords (Update 010)/UI/Pointers/02.png" id="6_f325v"]
-[ext_resource type="Script" path="res://scripts/OnHovered.gd" id="7_clxgh"]
-[ext_resource type="Texture2D" uid="uid://oexs1tlega81" path="res://assets/Tiny Swords (Update 010)/Deco/18.png" id="8_xvfpk"]
-[ext_resource type="Script" path="res://scripts/Scarecrow.gd" id="9_pdeok"]
+[ext_resource type="PackedScene" uid="uid://bv55jlpyof8it" path="res://scenes/objects/Player.tscn" id="4_b4rs1"]
+[ext_resource type="PackedScene" uid="uid://beilyksynpdxs" path="res://scenes/objects/Scarecrow.tscn" id="5_idd28"]
+[ext_resource type="PackedScene" uid="uid://cnsjumvityxv2" path="res://scenes/objects/Camera.tscn" id="6_ttvqf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcarr"]
 texture = ExtResource("1_iu14l")
@@ -1013,115 +1010,6 @@ texture = ExtResource("3_yd8e2")
 [sub_resource type="TileSet" id="TileSet_ccwy6"]
 sources/0 = SubResource("TileSetAtlasSource_cmkvn")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hykrn"]
-radius = 18.0
-height = 46.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mp3a6"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ax7w1"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1o3rb"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fdo1b"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0nhkh"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d6uyk"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(960, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ka1mq"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(0, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2w5p8"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(192, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wdjc5"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(384, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yf232"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(576, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_twj77"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(768, 192, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jylkl"]
-atlas = ExtResource("5_t8lxo")
-region = Rect2(960, 192, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_thpei"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mp3a6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ax7w1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1o3rb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fdo1b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0nhkh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d6uyk")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ka1mq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2w5p8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wdjc5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yf232")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_twj77")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jylkl")
-}],
-"loop": true,
-"name": &"run",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qf04u"]
-radius = 21.0
-height = 64.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ub4k6"]
-radius = 25.0
-height = 112.0
-
 [node name="SimplePolygon" type="Node2D"]
 
 [node name="Ground" type="Node2D" parent="."]
@@ -1146,62 +1034,8 @@ tile_set = SubResource("TileSet_ccwy6")
 format = 2
 layer_0/tile_data = PackedInt32Array(589838, 65536, 0, 589839, 131072, 0, 589840, 196608, 0, 589841, 262144, 0, 589842, 327680, 0, 589843, 393216, 0, 589844, 458752, 0, 589845, 524288, 0, 589846, 589824, 0, 589847, 655360, 0, 589848, 65536, 0, 589849, 131072, 0, 589850, 196608, 0, 589851, 262144, 0, 589852, 327680, 0, 589853, 393216, 0, 589854, 458752, 0, 589855, 524288, 0, 589856, 589824, 0, 589857, 655360, 0, 589858, 65536, 0, 589859, 131072, 0, 589860, 196608, 0, 589861, 262144, 0, 589862, 327680, 0, 589863, 393216, 0, 589864, 458752, 0, 589865, 524288, 0, 589866, 720896, 0, 589837, 0, 0, 655373, 0, 1, 720909, 0, 2, 786445, 0, 3, 851981, 0, 4, 917517, 0, 5, 983053, 0, 6, 1048589, 0, 7, 1114125, 0, 8, 1179661, 0, 9, 1245197, 0, 10, 655374, 65536, 1, 720910, 65536, 2, 786446, 65536, 3, 851982, 65536, 4, 917518, 65536, 5, 983054, 65536, 6, 1048590, 65536, 7, 1114126, 65536, 8, 1179662, 65536, 9, 1245198, 65536, 10, 1310733, 0, 1, 1376269, 0, 2, 1441805, 0, 3, 1507341, 0, 4, 1572877, 0, 5, 1638413, 0, 6, 1310734, 65536, 1, 1376270, 65536, 2, 1441806, 65536, 3, 1507342, 65536, 4, 1572878, 65536, 5, 1638414, 65536, 6, 1703949, 0, 11, 1703950, 65536, 11, 1703951, 131072, 11, 1703952, 196608, 11, 1703953, 262144, 11, 1703954, 327680, 11, 1703955, 393216, 11, 1703956, 458752, 11, 1703957, 524288, 11, 1703958, 589824, 11, 1703959, 655360, 11, 1703960, 65536, 11, 1703961, 65536, 11, 1703962, 131072, 11, 1703963, 196608, 11, 1703964, 262144, 11, 1703965, 327680, 11, 1703966, 393216, 11, 1703967, 458752, 11, 1703968, 524288, 11, 1703969, 589824, 11, 1703970, 655360, 11, 1703971, 65536, 11, 1703972, 65536, 11, 1703973, 131072, 11, 1703974, 196608, 11, 1703975, 262144, 11, 1703976, 327680, 11, 1703977, 393216, 11, 655401, 655360, 1, 720937, 655360, 2, 786473, 655360, 3, 852009, 655360, 4, 917545, 655360, 5, 983081, 655360, 6, 1048617, 655360, 7, 1114153, 655360, 8, 1179689, 655360, 9, 1245225, 655360, 10, 655402, 720896, 1, 720938, 720896, 2, 786474, 720896, 3, 852010, 720896, 4, 917546, 720896, 5, 983082, 720896, 6, 1048618, 720896, 7, 1114154, 720896, 8, 1179690, 720896, 9, 1245226, 720896, 10, 1310761, 655360, 1, 1376297, 655360, 2, 1441833, 655360, 3, 1507369, 655360, 4, 1572905, 655360, 5, 1638441, 655360, 6, 1310762, 720896, 1, 1376298, 720896, 2, 1441834, 720896, 3, 1507370, 720896, 4, 1572906, 720896, 5, 1638442, 720896, 6, 1703978, 720896, 11, 655375, 131072, 1, 720911, 131072, 2, 786447, 131072, 3, 851983, 131072, 4, 917519, 131072, 5, 983055, 131072, 6, 1048591, 131072, 7, 1114127, 131072, 8, 1179663, 131072, 9, 1245199, 131072, 10, 655376, 196608, 1, 720912, 196608, 2, 786448, 196608, 3, 851984, 196608, 4, 917520, 196608, 5, 983056, 196608, 6, 1048592, 196608, 7, 1114128, 196608, 8, 1179664, 196608, 9, 1245200, 196608, 10, 655377, 262144, 1, 720913, 262144, 2, 786449, 262144, 3, 851985, 262144, 4, 917521, 262144, 5, 983057, 262144, 6, 1048593, 262144, 7, 1114129, 262144, 8, 1179665, 262144, 9, 1245201, 262144, 10, 655378, 327680, 1, 720914, 327680, 2, 786450, 327680, 3, 851986, 327680, 4, 917522, 327680, 5, 983058, 327680, 6, 1048594, 327680, 7, 1114130, 327680, 8, 1179666, 327680, 9, 1245202, 327680, 10, 655379, 393216, 1, 720915, 393216, 2, 786451, 393216, 3, 851987, 393216, 4, 917523, 393216, 5, 983059, 393216, 6, 1048595, 393216, 7, 1114131, 393216, 8, 1179667, 393216, 9, 1245203, 393216, 10, 655380, 458752, 1, 720916, 458752, 2, 786452, 458752, 3, 851988, 458752, 4, 917524, 458752, 5, 983060, 458752, 6, 1048596, 458752, 7, 1114132, 458752, 8, 1179668, 458752, 9, 1245204, 458752, 10, 655381, 524288, 1, 720917, 524288, 2, 786453, 524288, 3, 851989, 524288, 4, 917525, 524288, 5, 983061, 524288, 6, 1048597, 524288, 7, 1114133, 524288, 8, 1179669, 524288, 9, 1245205, 524288, 10, 655382, 589824, 1, 720918, 589824, 2, 786454, 589824, 3, 851990, 589824, 4, 917526, 589824, 5, 983062, 589824, 6, 1048598, 589824, 7, 1114134, 589824, 8, 1179670, 589824, 9, 1245206, 589824, 10, 1310735, 131072, 1, 1376271, 131072, 2, 1441807, 131072, 3, 1507343, 131072, 4, 1572879, 131072, 5, 1638415, 131072, 6, 1310736, 196608, 1, 1376272, 196608, 2, 1441808, 196608, 3, 1507344, 196608, 4, 1572880, 196608, 5, 1638416, 196608, 6, 1310737, 262144, 1, 1376273, 262144, 2, 1441809, 262144, 3, 1507345, 262144, 4, 1572881, 262144, 5, 1638417, 262144, 6, 1310738, 327680, 1, 1376274, 327680, 2, 1441810, 327680, 3, 1507346, 327680, 4, 1572882, 327680, 5, 1638418, 327680, 6, 1310739, 393216, 1, 1376275, 393216, 2, 1441811, 393216, 3, 1507347, 393216, 4, 1572883, 393216, 5, 1638419, 393216, 6, 1310740, 458752, 1, 1376276, 458752, 2, 1441812, 458752, 3, 1507348, 458752, 4, 1572884, 458752, 5, 1638420, 458752, 6, 1310741, 524288, 1, 1376277, 524288, 2, 1441813, 524288, 3, 1507349, 524288, 4, 1572885, 524288, 5, 1638421, 524288, 6, 1310742, 589824, 1, 1376278, 589824, 2, 1441814, 589824, 3, 1507350, 589824, 4, 1572886, 589824, 5, 1638422, 589824, 6, 655383, 131072, 1, 720919, 131072, 2, 786455, 131072, 3, 851991, 131072, 4, 917527, 131072, 5, 983063, 131072, 6, 1048599, 131072, 7, 1114135, 131072, 8, 1179671, 131072, 9, 1245207, 131072, 10, 655384, 196608, 1, 720920, 196608, 2, 786456, 196608, 3, 851992, 196608, 4, 917528, 196608, 5, 983064, 196608, 6, 1048600, 196608, 7, 1114136, 196608, 8, 1179672, 196608, 9, 1245208, 196608, 10, 655385, 262144, 1, 720921, 262144, 2, 786457, 262144, 3, 851993, 262144, 4, 917529, 262144, 5, 983065, 262144, 6, 1048601, 262144, 7, 1114137, 262144, 8, 1179673, 262144, 9, 1245209, 262144, 10, 655386, 327680, 1, 720922, 327680, 2, 786458, 327680, 3, 851994, 327680, 4, 917530, 327680, 5, 983066, 327680, 6, 1048602, 327680, 7, 1114138, 327680, 8, 1179674, 327680, 9, 1245210, 327680, 10, 655387, 393216, 1, 720923, 393216, 2, 786459, 393216, 3, 851995, 393216, 4, 917531, 393216, 5, 983067, 393216, 6, 1048603, 393216, 7, 1114139, 393216, 8, 1179675, 393216, 9, 1245211, 393216, 10, 655388, 458752, 1, 720924, 458752, 2, 786460, 458752, 3, 851996, 458752, 4, 917532, 458752, 5, 983068, 458752, 6, 1048604, 458752, 7, 1114140, 458752, 8, 1179676, 458752, 9, 1245212, 458752, 10, 655389, 524288, 1, 720925, 524288, 2, 786461, 524288, 3, 851997, 524288, 4, 917533, 524288, 5, 983069, 524288, 6, 1048605, 524288, 7, 1114141, 524288, 8, 1179677, 524288, 9, 1245213, 524288, 10, 655390, 589824, 1, 720926, 589824, 2, 786462, 589824, 3, 851998, 589824, 4, 917534, 589824, 5, 983070, 589824, 6, 1048606, 589824, 7, 1114142, 589824, 8, 1179678, 589824, 9, 1245214, 589824, 10, 1310743, 131072, 1, 1376279, 131072, 2, 1441815, 131072, 3, 1507351, 131072, 4, 1572887, 131072, 5, 1638423, 131072, 6, 1310744, 196608, 1, 1376280, 196608, 2, 1441816, 196608, 3, 1507352, 196608, 4, 1572888, 196608, 5, 1638424, 196608, 6, 1310745, 262144, 1, 1376281, 262144, 2, 1441817, 262144, 3, 1507353, 262144, 4, 1572889, 262144, 5, 1638425, 262144, 6, 1310746, 327680, 1, 1376282, 327680, 2, 1441818, 327680, 3, 1507354, 327680, 4, 1572890, 327680, 5, 1638426, 327680, 6, 1310747, 393216, 1, 1376283, 393216, 2, 1441819, 393216, 3, 1507355, 393216, 4, 1572891, 393216, 5, 1638427, 393216, 6, 1310748, 458752, 1, 1376284, 458752, 2, 1441820, 458752, 3, 1507356, 458752, 4, 1572892, 458752, 5, 1638428, 458752, 6, 1310749, 524288, 1, 1376285, 524288, 2, 1441821, 524288, 3, 1507357, 524288, 4, 1572893, 524288, 5, 1638429, 524288, 6, 1310750, 589824, 1, 1376286, 589824, 2, 1441822, 589824, 3, 1507358, 589824, 4, 1572894, 589824, 5, 1638430, 589824, 6, 655391, 131072, 1, 720927, 131072, 2, 786463, 131072, 3, 851999, 131072, 4, 917535, 131072, 5, 983071, 131072, 6, 1048607, 131072, 7, 1114143, 131072, 8, 1179679, 131072, 9, 1245215, 131072, 10, 655392, 196608, 1, 720928, 196608, 2, 786464, 196608, 3, 852000, 196608, 4, 917536, 196608, 5, 983072, 196608, 6, 1048608, 196608, 7, 1114144, 196608, 8, 1179680, 196608, 9, 1245216, 196608, 10, 655393, 262144, 1, 720929, 262144, 2, 786465, 262144, 3, 852001, 262144, 4, 917537, 262144, 5, 983073, 262144, 6, 1048609, 262144, 7, 1114145, 262144, 8, 1179681, 262144, 9, 1245217, 262144, 10, 655394, 327680, 1, 720930, 327680, 2, 786466, 327680, 3, 852002, 327680, 4, 917538, 327680, 5, 983074, 327680, 6, 1048610, 327680, 7, 1114146, 327680, 8, 1179682, 327680, 9, 1245218, 327680, 10, 655395, 393216, 1, 720931, 393216, 2, 786467, 393216, 3, 852003, 393216, 4, 917539, 393216, 5, 983075, 393216, 6, 1048611, 393216, 7, 1114147, 393216, 8, 1179683, 393216, 9, 1245219, 393216, 10, 655396, 458752, 1, 720932, 458752, 2, 786468, 458752, 3, 852004, 458752, 4, 917540, 458752, 5, 983076, 458752, 6, 1048612, 458752, 7, 1114148, 458752, 8, 1179684, 458752, 9, 1245220, 458752, 10, 655397, 524288, 1, 720933, 524288, 2, 786469, 524288, 3, 852005, 524288, 4, 917541, 524288, 5, 983077, 524288, 6, 1048613, 524288, 7, 1114149, 524288, 8, 1179685, 524288, 9, 1245221, 524288, 10, 655398, 589824, 1, 720934, 589824, 2, 786470, 589824, 3, 852006, 589824, 4, 917542, 589824, 5, 983078, 589824, 6, 1048614, 589824, 7, 1114150, 589824, 8, 1179686, 589824, 9, 1245222, 589824, 10, 1310751, 131072, 1, 1376287, 131072, 2, 1441823, 131072, 3, 1507359, 131072, 4, 1572895, 131072, 5, 1638431, 131072, 6, 1310752, 196608, 1, 1376288, 196608, 2, 1441824, 196608, 3, 1507360, 196608, 4, 1572896, 196608, 5, 1638432, 196608, 6, 1310753, 262144, 1, 1376289, 262144, 2, 1441825, 262144, 3, 1507361, 262144, 4, 1572897, 262144, 5, 1638433, 262144, 6, 1310754, 327680, 1, 1376290, 327680, 2, 1441826, 327680, 3, 1507362, 327680, 4, 1572898, 327680, 5, 1638434, 327680, 6, 1310755, 393216, 1, 1376291, 393216, 2, 1441827, 393216, 3, 1507363, 393216, 4, 1572899, 393216, 5, 1638435, 393216, 6, 1310756, 458752, 1, 1376292, 458752, 2, 1441828, 458752, 3, 1507364, 458752, 4, 1572900, 458752, 5, 1638436, 458752, 6, 1310757, 524288, 1, 1376293, 524288, 2, 1441829, 524288, 3, 1507365, 524288, 4, 1572901, 524288, 5, 1638437, 524288, 6, 1310758, 589824, 1, 1376294, 589824, 2, 1441830, 589824, 3, 1507366, 589824, 4, 1572902, 589824, 5, 1638438, 589824, 6, 655399, 131072, 1, 720935, 131072, 2, 786471, 131072, 3, 852007, 131072, 4, 917543, 131072, 5, 983079, 131072, 6, 1048615, 131072, 7, 1114151, 131072, 8, 1179687, 131072, 9, 1245223, 131072, 10, 655400, 196608, 1, 720936, 196608, 2, 786472, 196608, 3, 852008, 196608, 4, 917544, 196608, 5, 983080, 196608, 6, 1048616, 196608, 7, 1114152, 196608, 8, 1179688, 196608, 9, 1245224, 196608, 10, 1310759, 131072, 1, 1376295, 131072, 2, 1441831, 131072, 3, 1507367, 131072, 4, 1572903, 131072, 5, 1638439, 131072, 6, 1310760, 196608, 1, 1376296, 196608, 2, 1441832, 196608, 3, 1507368, 196608, 4, 1572904, 196608, 5, 1638440, 196608, 6)
 
-[node name="PlayerNode" type="Node2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("4_b4rs1")]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="PlayerNode"]
-y_sort_enabled = true
-position = Vector2(365, 302)
-script = ExtResource("4_8v6yf")
+[node name="Scarecrow" parent="." instance=ExtResource("5_idd28")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/CharacterBody2D"]
-position = Vector2(0, -2)
-shape = SubResource("CapsuleShape2D_hykrn")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerNode/CharacterBody2D"]
-z_index = 4
-y_sort_enabled = true
-position = Vector2(0, -1)
-sprite_frames = SubResource("SpriteFrames_thpei")
-animation = &"run"
-speed_scale = 2.0
-
-[node name="OnHovered" type="Sprite2D" parent="PlayerNode/CharacterBody2D"]
-visible = false
-z_index = 3
-position = Vector2(1, 22)
-texture = ExtResource("6_f325v")
-script = ExtResource("7_clxgh")
-
-[node name="Area2D" type="Area2D" parent="PlayerNode/CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/CharacterBody2D/Area2D"]
-shape = SubResource("CapsuleShape2D_qf04u")
-
-[node name="Scarecrow" type="Node2D" parent="."]
-
-[node name="Scarecrow" type="Sprite2D" parent="Scarecrow"]
-z_index = 4
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(566, 242)
-texture = ExtResource("8_xvfpk")
-script = ExtResource("9_pdeok")
-
-[node name="OnHovered" type="Sprite2D" parent="Scarecrow/Scarecrow"]
-visible = false
-z_index = 3
-z_as_relative = false
-position = Vector2(-1, 61)
-texture = ExtResource("6_f325v")
-script = ExtResource("7_clxgh")
-
-[node name="Area2D" type="Area2D" parent="Scarecrow/Scarecrow"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scarecrow/Scarecrow/Area2D"]
-position = Vector2(1, 18)
-shape = SubResource("CapsuleShape2D_ub4k6")
-
-[connection signal="mouse_entered" from="PlayerNode/CharacterBody2D/Area2D" to="PlayerNode/CharacterBody2D/OnHovered" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="PlayerNode/CharacterBody2D/Area2D" to="PlayerNode/CharacterBody2D/OnHovered" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Scarecrow/Scarecrow/Area2D" to="Scarecrow/Scarecrow/OnHovered" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Scarecrow/Scarecrow/Area2D" to="Scarecrow/Scarecrow/OnHovered" method="_on_area_2d_mouse_exited"]
+[node name="Camera" parent="." instance=ExtResource("6_ttvqf")]
