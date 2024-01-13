@@ -49,7 +49,7 @@ position = Vector2(520, 285)
 scale = Vector2(1.60938, 1.60938)
 sprite_frames = SubResource("SpriteFrames_ytv4y")
 animation = &"run"
-frame_progress = 0.217055
+frame_progress = 0.487093
 speed_scale = 2.0
 script = ExtResource("4_ojxl5")
 
