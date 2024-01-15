@@ -10,14 +10,14 @@
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c86lj"]
 
-[sub_resource type="Sky" id="Sky_kfsek"]
+[sub_resource type="Sky" id="Sky_7vy34"]
 sky_material = SubResource("PhysicalSkyMaterial_c86lj")
 
 [sub_resource type="Environment" id="Environment_eplj0"]
 background_mode = 2
-sky = SubResource("Sky_kfsek")
+sky = SubResource("Sky_7vy34")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_78tk2"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mgxsu"]
 render_priority = 0
 shader = ExtResource("3_1y2ct")
 shader_parameter/depth_threshold = 0.05
@@ -29,7 +29,7 @@ shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
 shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
 
 [sub_resource type="QuadMesh" id="QuadMesh_blcye"]
-material = SubResource("ShaderMaterial_78tk2")
+material = SubResource("ShaderMaterial_mgxsu")
 flip_faces = true
 size = Vector2(2, 2)
 
@@ -43,11 +43,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
-stretch_shrink = 2
+stretch_shrink = 4
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(576, 324)
+size = Vector2i(288, 162)
 render_target_update_mode = 4
 
 [node name="Level" type="Node3D" parent="SubViewportContainer/SubViewport"]
@@ -70,7 +70,7 @@ transform = Transform3D(0.999999, 0.0011602, -0.000792923, 6.48296e-06, 0.560432
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 2.48149, -0.809093, 2.6966)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 0.830441, 0.557107, 0, -0.557107, 0.830441, -0.57847, 2.91125, 7.90555)
+transform = Transform3D(1, 0, 0, 0, 0.830441, 0.557107, 0, -0.557107, 0.830441, 1.17651, 2.91125, 3.42804)
 size = 0.1
 script = ExtResource("3_4w2p4")
 
