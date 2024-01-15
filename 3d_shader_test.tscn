@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://l37a6la5f4r5"]
+
+[ext_resource type="Script" path="res://Scripts/Movement.gd" id="1_aqimm"]
+[ext_resource type="Shader" path="res://3d_shader_test.gdshader" id="1_m0c30"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xxalg"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_c86lj"]
+
+[sub_resource type="Sky" id="Sky_kfsek"]
+sky_material = SubResource("PhysicalSkyMaterial_c86lj")
+
+[sub_resource type="Environment" id="Environment_eplj0"]
+background_mode = 2
+sky = SubResource("Sky_kfsek")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_78tk2"]
+render_priority = 0
+shader = ExtResource("1_m0c30")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_blcye"]
+material = SubResource("ShaderMaterial_78tk2")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+size = Vector2i(576, 324)
+
+[node name="Level" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Level"]
+transform = Transform3D(0.782821, -0.00757179, 0.622201, 0.00503266, 0.99997, 0.00583717, -0.622227, -0.00143814, 0.782836, -0.0272636, 0.393917, -0.0645138)
+size = Vector3(1, 0.978394, 1)
+material = SubResource("ShaderMaterial_xxalg")
+script = ExtResource("1_aqimm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport/Level"]
+environment = SubResource("Environment_eplj0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Level"]
+transform = Transform3D(0.999999, 0.0011602, -0.000792923, 6.48296e-06, 0.560432, 0.8282, 0.00140526, -0.828199, 0.560432, 0, 3.16126, 3.75615)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.449062, 5.0751)
+
+[node name="PostProcessing" type="MeshInstance3D" parent="SubViewportContainer/SubViewport"]
+mesh = SubResource("QuadMesh_blcye")
