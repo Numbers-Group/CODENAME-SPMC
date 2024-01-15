@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://l37a6la5f4r5"]
 
 [ext_resource type="Script" path="res://Scripts/cube_spin.gd" id="1_27hwt"]
-[ext_resource type="PackedScene" uid="uid://qoaacoopu06d" path="res://Assets/Cubes.glb" id="2_1j2yi"]
+[ext_resource type="PackedScene" uid="uid://qoaacoopu06d" path="res://Assets/Decorations/Cubes.glb" id="2_1j2yi"]
 [ext_resource type="Shader" path="res://Shaders/Outline.gdshader" id="3_1y2ct"]
 [ext_resource type="Script" path="res://Scripts/CameraController.gd" id="3_4w2p4"]
 
