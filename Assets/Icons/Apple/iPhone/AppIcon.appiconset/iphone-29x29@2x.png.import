@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl5x86x5s8n1v"
-path="res://.godot/imported/iphone-29x29@2x.png-fb3b8911aa44d3ff91f6a45da668f20f.ctex"
+path="res://.godot/imported/iphone-29x29@2x.png-299ad21d5295d6873a23ea6953480762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icon/Apple/iPhone/AppIcon.appiconset/iphone-29x29@2x.png"
-dest_files=["res://.godot/imported/iphone-29x29@2x.png-fb3b8911aa44d3ff91f6a45da668f20f.ctex"]
+source_file="res://Assets/Icons/Apple/iPhone/AppIcon.appiconset/iphone-29x29@2x.png"
+dest_files=["res://.godot/imported/iphone-29x29@2x.png-299ad21d5295d6873a23ea6953480762.ctex"]
 
 [params]
 

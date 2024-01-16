@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvhyt6333xek6"
-path="res://.godot/imported/mac-32x32.png-b28545078f61cc2e9f1258576e489019.ctex"
+path="res://.godot/imported/mac-32x32.png-b68c4386fee5eac22d676430e7a13cef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icon/Apple/Mac/AppIcon.appiconset/mac-32x32.png"
-dest_files=["res://.godot/imported/mac-32x32.png-b28545078f61cc2e9f1258576e489019.ctex"]
+source_file="res://Assets/Icons/Apple/Mac/AppIcon.appiconset/mac-32x32.png"
+dest_files=["res://.godot/imported/mac-32x32.png-b68c4386fee5eac22d676430e7a13cef.ctex"]
 
 [params]
 

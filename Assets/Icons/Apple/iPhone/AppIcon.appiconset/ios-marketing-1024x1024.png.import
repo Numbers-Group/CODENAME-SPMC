@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7n1dhv1sr3mt"
-path="res://.godot/imported/ios-marketing-1024x1024.png-953a6e482b89ae6e03907e113db65b37.ctex"
+path="res://.godot/imported/ios-marketing-1024x1024.png-ea915ab49f386ca54c561496eb4e1650.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icon/Apple/iPhone/AppIcon.appiconset/ios-marketing-1024x1024.png"
-dest_files=["res://.godot/imported/ios-marketing-1024x1024.png-953a6e482b89ae6e03907e113db65b37.ctex"]
+source_file="res://Assets/Icons/Apple/iPhone/AppIcon.appiconset/ios-marketing-1024x1024.png"
+dest_files=["res://.godot/imported/ios-marketing-1024x1024.png-ea915ab49f386ca54c561496eb4e1650.ctex"]
 
 [params]
 
