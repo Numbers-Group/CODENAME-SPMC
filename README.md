@@ -14,9 +14,9 @@
 
 ### Вдохновение
 
-https://www.youtube.com/watch?v=ZsMHY4LDyRE
-https://www.youtube.com/watch?v=YJSal0UocLY
-https://www.youtube.com/watch?v=NNr7_fcJqWQ
-https://www.youtube.com/watch?v=rqKLaNCfhBo
-https://www.youtube.com/watch?v=WJYmAnLx3lY
-https://www.youtube.com/watch?v=s4IZBx8lrAs
+- https://www.youtube.com/watch?v=ZsMHY4LDyRE
+- https://www.youtube.com/watch?v=YJSal0UocLY
+- https://www.youtube.com/watch?v=NNr7_fcJqWQ
+- https://www.youtube.com/watch?v=rqKLaNCfhBo
+- https://www.youtube.com/watch?v=WJYmAnLx3lY
+- https://www.youtube.com/watch?v=s4IZBx8lrAs
